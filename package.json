@@ -1,0 +1,27 @@
+{
+  "name": "festivalmusic",
+  "version": "1.0.0",
+  "description": "Proyecto con Gulp y SASS",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch src/scss:build/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eri-random/festivalMusic.git"
+  },
+  "keywords": [
+    "SASS",
+    "Gulp"
+  ],
+  "author": "Erika Herrera",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Eri-random/festivalMusic/issues"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.53.0"
+  }
+}
