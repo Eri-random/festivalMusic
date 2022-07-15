@@ -335,6 +335,7 @@ body {
 p {
   font-size: 2rem;
   color: #000000;
+  line-height: 1.5;
 }
 
 .contenedor {
@@ -363,25 +364,136 @@ h3 {
   font-size: 3rem;
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
+
 .header {
   background-color: #000000;
 }
 .header h1 {
   color: #FFFFFF;
   font-family: "rock";
-  font-size: 2.8rem;
-  margin: 2rem 0;
+  text-align: center;
+  font-size: 2.5rem;
   text-transform: uppercase;
+  margin-top: 1rem !important;
+  letter-spacing: 2px;
+}
+@media (min-width: 768px) {
+  .header h1 {
+    margin: 0px;
+  }
+}
+.header .contenido-header {
+  padding: 2rem;
+}
+@media (min-width: 768px) {
+  .header .contenido-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
+@media (min-width: 768px) {
+  .navegacion-principal {
+    display: flex;
+    gap: 2rem;
+  }
+}
 .navegacion-principal a {
+  display: block;
   color: #FFFFFF;
   font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .navegacion-principal a {
+    margin: 0px;
+  }
 }
 .navegacion-principal a:hover {
   color: #D72323;
+  transition: all 0.5s ease;
 }
 
 /*.prueba{
     @include m.heading(v.$rojo);
 }*/
+.video {
+  position: relative;
+  max-height: 60rem;
+  overflow: hidden;
+}
+.video .overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#be3144+0,3a4750+64,ffffff+100&0.7+0,0.3+100 */
+  background: -moz-linear-gradient(-45deg, rgba(190, 49, 68, 0.7) 0%, rgba(58, 71, 80, 0.44) 64%, rgba(255, 255, 255, 0.3) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, rgba(190, 49, 68, 0.7) 0%, rgba(58, 71, 80, 0.44) 64%, rgba(255, 255, 255, 0.3) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, rgba(190, 49, 68, 0.7) 0%, rgba(58, 71, 80, 0.44) 64%, rgba(255, 255, 255, 0.3) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b3be3144", endColorstr="#4dffffff", GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+}
+.video video {
+  display: block;
+  width: 100%;
+}
+
+.contenido-video {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+.contenido-video h2 {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 3.2rem;
+  color: white;
+}
+.contenido-video h2 em {
+  background-color: #D72323;
+  padding: 1rem 2rem;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+}
+
+.sobre-festival {
+  padding: 5rem 0;
+}
+@media (min-width: 768px) {
+  .sobre-festival {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+}
+
+.contenido-festival {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 2rem;
+}
+@media (min-width: 768px) {
+  .contenido-festival {
+    margin-top: 0;
+  }
+}
+.contenido-festival h2 {
+  margin-bottom: 2rem;
+}
+.contenido-festival .fecha {
+  color: #D72323;
+  font-weight: 700;
+}

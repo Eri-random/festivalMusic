@@ -7,19 +7,46 @@
    h1{
     color: v.$blanco;
     font-family: 'rock';
-    font-size: 2.8rem;
-    margin: 2rem 0;
+    text-align: center;
+    font-size: 2.5rem;
     text-transform: uppercase;
+    margin-top: 1rem!important;
+    letter-spacing: 2px;
+    @include m.tablet {
+        margin:0px;
+    }
+   }
+
+   .contenido-header{
+    padding: 2rem;
+    @include m.tablet {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+    }
    }
 }
 
 .navegacion-principal{
+    @include m.tablet {
+        display:flex;
+        gap: 2rem;
+    }
+
     a{
+        display: block;
         color: v.$blanco;
         font-size: 2.4rem;
+        text-align: center;
+        margin-bottom: 1rem;
+
+        @include m.tablet {
+            margin:0px;
+        }
 
         &:hover{
             color: v.$rojo;
+            transition: all 0.5s ease;
         }
     }
 }
